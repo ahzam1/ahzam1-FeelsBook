@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ahzam1-FeelsBook</string>
+    <string name="app_title">FeelsBook</string>
+    <string name="btn_Love">Love</string>
+    <string name="btn_Joy">Joy</string>
+    <string name="btn_Anger">Anger</string>
+    <string name="btn_Sadness">Sadness</string>
+    <string name="btn_Surprise">Surprise</string>
+    <string name="btn_Fear">Fear</string>
+</resources>
