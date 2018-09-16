@@ -1,2 +1,2 @@
 # ahzam1-FeelsBook
-ahzam1 - CMPUT301 Assignment 1
+CMPUT 301 - Assignment 1
