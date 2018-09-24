@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBG"
     tools:context=".Home">
 
     <TextView
@@ -11,13 +12,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:textAppearance="@android:style/TextAppearance.Material.Title"
+        android:textAllCaps="false"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
         android:textSize="30sp"
+        android:textStyle="bold"
         android:typeface="monospace"
+        app:fontFamily="casual"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="@string/app_title" tools:targetApi="lollipop" />
+        tools:targetApi="lollipop"
+        tools:text="@string/app_title" />
 
     <Button
         android:id="@+id/btnLove"
@@ -59,7 +64,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="4dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:background="@color/colorJoy"
         app:layout_constraintEnd_toStartOf="@+id/btnJoyC"
         app:layout_constraintStart_toStartOf="parent"
@@ -74,7 +79,7 @@
         android:layout_marginLeft="4dp"
         android:layout_marginRight="24dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:background="@color/colorJoy"
         android:contentDescription="joy comment @android:string/VideoView_error_button"
         android:cropToPadding="true"
@@ -83,5 +88,164 @@
         app:layout_constraintStart_toEndOf="@+id/btnJoy"
         app:layout_constraintTop_toBottomOf="@+id/btnLoveC"
         app:srcCompat="@drawable/comment" />
+
+    <Button
+        android:id="@+id/btnSurprise"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/colorSurprise"
+        android:text="@string/btn_Surprise"
+        app:layout_constraintEnd_toStartOf="@+id/btnSurpriseC"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnJoy" />
+
+    <ImageButton
+        android:id="@+id/btnSurpriseC"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/colorSurprise"
+        android:cropToPadding="true"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnSurprise"
+        app:layout_constraintTop_toBottomOf="@+id/btnJoyC"
+        app:srcCompat="@drawable/comment" />
+
+    <Button
+        android:id="@+id/btnAnger"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/colorAnger"
+        android:text="@string/btn_Anger"
+        app:layout_constraintEnd_toStartOf="@+id/btnAngerC"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSurprise" />
+
+    <Button
+        android:id="@+id/btnSadness"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/colorSadness"
+        android:text="@string/btn_Sadness"
+        app:layout_constraintEnd_toStartOf="@+id/btnSadnessC"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAnger" />
+
+    <Button
+        android:id="@+id/btnFear"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/colorFear"
+        android:text="Button"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/btnFearC"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSadness"
+        tools:text="@string/btn_Fear" />
+
+    <ImageButton
+        android:id="@+id/btnAngerC"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/colorAnger"
+        android:cropToPadding="true"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnAnger"
+        app:layout_constraintTop_toBottomOf="@+id/btnSurpriseC"
+        app:srcCompat="@drawable/comment" />
+
+    <ImageButton
+        android:id="@+id/btnSadnessC"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/colorSadness"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnSadness"
+        app:layout_constraintTop_toBottomOf="@+id/btnAngerC"
+        app:srcCompat="@drawable/comment" />
+
+    <ImageButton
+        android:id="@+id/btnFearC"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/colorFear"
+        android:cropToPadding="true"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnFear"
+        app:layout_constraintTop_toBottomOf="@+id/btnSadnessC"
+        app:srcCompat="@drawable/commenti" />
+
+    <Button
+        android:id="@+id/btnHistory"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="16dp"
+        android:onClick="viewHistory"
+        android:text="@string/btn_History"
+        app:layout_constraintEnd_toStartOf="@+id/btnTotals"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnFear" />
+
+    <Button
+        android:id="@+id/btnTotals"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:layout_marginLeft="49dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/btn_Counter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnHistory"
+        app:layout_constraintTop_toBottomOf="@+id/btnFear" />
 
 </android.support.constraint.ConstraintLayout>

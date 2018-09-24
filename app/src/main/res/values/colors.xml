@@ -9,4 +9,5 @@
     <color name="colorSadness">#3333FF</color>
     <color name="colorFear">#000000</color>
     <color name="colorSurprise">#00cc33</color>
+    <color name="colorBG">#efefc9</color>
 </resources>

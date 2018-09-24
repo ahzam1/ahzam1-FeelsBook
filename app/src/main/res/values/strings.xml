@@ -7,4 +7,6 @@
     <string name="btn_Sadness">Sadness</string>
     <string name="btn_Surprise">Surprise</string>
     <string name="btn_Fear">Fear</string>
+    <string name="btn_History">History</string>
+    <string name="btn_Counter">Totals</string>
 </resources>
