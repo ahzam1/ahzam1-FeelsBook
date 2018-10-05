@@ -4,6 +4,184 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBG"
     tools:context=".ViewTotals">
 
+    <TextView
+        android:id="@+id/tv_Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="35dp"
+
+        android:text="@string/total_title"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_Feeling"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="15dp"
+
+        android:text="@string/total_left"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/tv_Count"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Title" />
+
+    <TextView
+        android:id="@+id/tv_Count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="15dp"
+
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_Feeling"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Title"
+        android:text="@string/total_right" />
+
+    <TextView
+        android:id="@+id/tv_joy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_Feeling"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Feeling"
+        android:text="@string/btn_Joy" />
+
+    <TextView
+        android:id="@+id/tv_anger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_joy"
+        app:layout_constraintTop_toBottomOf="@+id/tv_joy"
+        android:text="@string/btn_Anger" />
+
+    <TextView
+        android:id="@+id/tv_sadness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_anger"
+        app:layout_constraintTop_toBottomOf="@+id/tv_anger"
+        android:text="@string/btn_Sadness" />
+
+    <TextView
+        android:id="@+id/tv_fear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_sadness"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sadness"
+        android:text="@string/btn_Fear" />
+
+    <TextView
+        android:id="@+id/tv_surprise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_fear"
+        app:layout_constraintTop_toBottomOf="@+id/tv_fear"
+        android:text="@string/btn_Surprise" />
+
+    <TextView
+        android:id="@+id/tv_love"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_surprise"
+        app:layout_constraintTop_toBottomOf="@+id/tv_surprise"
+        android:text="@string/btn_Love" />
+
+    <TextView
+        android:id="@+id/tv_Joycounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_Count"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Count" />
+
+    <TextView
+        android:id="@+id/tv_AngerCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="TextView"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_Joycounter"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Joycounter" />
+
+    <TextView
+        android:id="@+id/tv_SadnessCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="TextView"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_AngerCounter"
+        app:layout_constraintTop_toBottomOf="@+id/tv_AngerCounter" />
+
+    <TextView
+        android:id="@+id/tv_FearCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="TextView"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_SadnessCounter"
+        app:layout_constraintTop_toBottomOf="@+id/tv_SadnessCounter" />
+
+    <TextView
+        android:id="@+id/tv_SurpriseCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="TextView"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_FearCounter"
+        app:layout_constraintTop_toBottomOf="@+id/tv_FearCounter" />
+
+    <TextView
+        android:id="@+id/tv_LoveCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="TextView"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_SurpriseCounter"
+        app:layout_constraintTop_toBottomOf="@+id/tv_SurpriseCounter" />
 </android.support.constraint.ConstraintLayout>

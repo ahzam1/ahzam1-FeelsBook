@@ -9,4 +9,8 @@
     <string name="btn_Fear">Fear</string>
     <string name="btn_History">History</string>
     <string name="btn_Counter">Totals</string>
+    <string name="total_title">Totals</string>
+    <string name="total_left">Feeling</string>
+    <string name="total_right">Count</string>
+    <string name="btn_Clear">Clear all</string>
 </resources>
