@@ -19,7 +19,7 @@ public class ViewTotals extends AppCompatActivity {
         //order goes as such: Love, Joy, Surprise, Anger, Sadness, Fear.
         // when referring to index.
         for(int i=0; i< 6; i++){
-            totals.add(0);
+            totals.add(0); //setting up 6 integer all at 0 initially
         }
         for(int i=0; i<posts.size();i++){ //this loop will go through my post arraylist, and count how much of each emotion exists.
             String feeling = posts.get(i).getFeeling(); //get the emotion
@@ -53,13 +53,14 @@ public class ViewTotals extends AppCompatActivity {
                     break;
             }
         }
-
+		//finding our textviews so we can change the text
         TextView joycounter = (TextView) findViewById(R.id.tv_Joycounter);
         TextView lovecounter = (TextView) findViewById(R.id.tv_LoveCounter);
         TextView surprisecounter = (TextView) findViewById(R.id.tv_SurpriseCounter);
         TextView angercounter = (TextView) findViewById(R.id.tv_AngerCounter);
         TextView sadnesscounter = (TextView) findViewById(R.id.tv_SadnessCounter);
         TextView fearcounter = (TextView) findViewById(R.id.tv_FearCounter);
+		//changing the text to their appropriate counters
         lovecounter.setText(totals.get(0).toString());
         joycounter.setText(totals.get(1).toString());
         surprisecounter.setText(totals.get(2).toString());

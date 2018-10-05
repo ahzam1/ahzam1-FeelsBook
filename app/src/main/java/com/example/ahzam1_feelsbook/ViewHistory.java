@@ -35,44 +35,45 @@ public class ViewHistory extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_history);
-        //taken from https://stackoverflow.com/questions/5070830/populating-a-listview-using-an-arraylist
-        ListView lv = (ListView) findViewById(R.id.lv_pastEmotions);
-        final ArrayList<String> elements = new ArrayList<String>();
-        final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, elements);
-        for (int i=0; i< posts.size(); i++){
-            elements.add(posts.get(i).toString());
+        
+        ListView lv = (ListView) findViewById(R.id.lv_pastEmotions); //get the listview into our code
+        final ArrayList<String> elements = new ArrayList<String>(); //create a new arraylist for the actual strings to display
+        final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, elements); //set the array adapter to take from the new arraylist
+        for (int i=0; i< posts.size(); i++){ // populate our elements list from the emotionpost list
+            elements.add(posts.get(i).toString()); //calling our helper function toString
         }
-        lv.setAdapter(arrayAdapter);
-        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        lv.setAdapter(arrayAdapter); //setting the adapter for the listview
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() { //our onclick listener for when a certain element is pressed
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 final int index = position; //index of which element was clicked.
-                AlertDialog.Builder builder = new AlertDialog.Builder(ViewHistory.this);
+                AlertDialog.Builder builder = new AlertDialog.Builder(ViewHistory.this); //reusing the dialog for editing/deleting posts
                 builder.setTitle("Edit details:");
 
-                //needed to have more than one edit text per dialog
+                //needed to have more than one edit text per dialog, used a linear layout to do so
                 // taken from https://stackoverflow.com/questions/12876624/multiple-edittext-objects-in-alertdialog
-                LinearLayout layout = new LinearLayout(ViewHistory.this);
-                layout.setOrientation(LinearLayout.VERTICAL);
+				//question was answered by user Sam on October 13th 2012
+                LinearLayout layout = new LinearLayout(ViewHistory.this); //creating a new linear layout
+                layout.setOrientation(LinearLayout.VERTICAL); //making it vertical, not horizontal
 
                 final TextView lblcomment = new TextView(ViewHistory.this); //creating a label for comment
                 lblcomment.setText("Comment:");
-                layout.addView(lblcomment);
+                layout.addView(lblcomment); //add it to the linear layout
 
                 final EditText inputcomment = new EditText(ViewHistory.this); //comment entry edittext
                 inputcomment.setHint("Enter new comment...");
-                layout.addView(inputcomment);
+                layout.addView(inputcomment); //add it to the linear layout
 
                 final TextView lbldate = new TextView(ViewHistory.this); //creating a label for date
                 lbldate.setText("Date:");
-                layout.addView(lbldate);
+                layout.addView(lbldate); //add it to the linear layout
 
                 final EditText inputdate = new EditText(ViewHistory.this); //date entry edittext
                 inputdate.setText(posts.get(index).getDateS());
-                layout.addView(inputdate);
+                layout.addView(inputdate); // add it to the linear layout
 
                 if (posts.get(index).getComment() != ""){
-                    inputcomment.setText(posts.get(index).getComment());
+                    inputcomment.setText(posts.get(index).getComment()); // if the current element has a comment, set it as the text in the edit view
                 }
 
                 inputdate.setInputType(InputType.TYPE_CLASS_NUMBER); //force user to only use numpad.
@@ -142,7 +143,7 @@ public class ViewHistory extends AppCompatActivity {
 
             fos.close();
         } catch (FileNotFoundException e) {
-            // TODO: Handle the Exception properly later
+            
             throw new RuntimeException();
         } catch (IOException e) {
             throw new RuntimeException();
